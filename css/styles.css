@@ -212,7 +212,11 @@ img {
   color: var(--accent-color);
 }
 
-/* стилізація файлу index.html */
+/**
+  |============================
+  | стилізація файлу index.html
+  |============================
+*/
 
 .order {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -398,16 +402,20 @@ img {
 
 /* завершення стилізації файлу index.html */
 
-/* стилізація файлу portfolio */
+/**
+  |============================
+  | стилізація файлу portfolio
+  |============================
+*/
 
-.projects-nav {
+.filter {
   display: flex;
-  margin: 0 auto 50px;
   justify-content: center;
+  align-items: center;
   gap: 8px;
 }
 
-.projects-nav-btn > button {
+.filter__btn {
   font-family: var(--main-font);
   background-color: var(--secondary-background-color);
   border-radius: 4px;
@@ -415,34 +423,37 @@ img {
   font-size: 16px;
   line-height: calc(26 / 16);
   text-align: center;
-  border: 0;
+  border: none;
   padding: 6px 22px;
+  cursor: pointer;
 
   transition: color var(--main-animation), background-color var(--main-animation),
     box-shadow var(--main-animation);
 }
 
-.projects-nav-btn > button:hover,
-.projects-nav-btn > button:focus {
+.filter__btn:hover,
+.filter__btn:focus {
   color: var(--secondary-title-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  cursor: pointer;
 }
 
-.projects-list {
+.projects__filter {
+  margin-bottom: 50px;
+}
+
+.grid {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.projects-list-item {
+.grid__item {
   width: 370px;
 }
 
-.projects-link {
+.project {
   display: block;
   text-decoration: none;
   color: currentColor;
@@ -451,22 +462,18 @@ img {
   transition: box-shadow var(--main-animation);
 }
 
-.projects-link:hover,
-.projects-link:focus {
+.project:hover,
+.project:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.overlay-area {
+.project__overlay-area {
   position: relative;
   overflow: hidden;
 }
 
-.overlay-area > img {
-  display: block;
-}
-
-.overlay {
+.project__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -480,39 +487,45 @@ img {
   align-items: center;
 }
 
-.projects-link:hover .overlay,
-.projects-link:focus .overlay {
+.project:hover .project__overlay,
+.project:focus .project__overlay {
   transform: translateY(0);
 }
 
-.overlay > p {
+.project__desc {
   font-size: 18px;
   line-height: calc(28 / 18);
   color: var(--secondary-title-color);
   width: 322px;
 }
 
-.border {
+.project__border {
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   padding: 20px 24px;
 }
 
-.border > h2 {
+.project__name {
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
 
-.border > p {
+.project__type {
   font-size: 16px;
   line-height: calc(30 / 16);
   color: var(--secondary-txt-color);
 }
 
 /* завершення стилізації файлу portfolio */
+
+/**
+  |============================
+  | Футер
+  |============================
+*/
 
 .footer {
   background-color: var(--main-background-color);
@@ -591,7 +604,11 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* модальне вікно */
+/**
+  |============================
+  | модальне вікно
+  |============================
+*/
 
 .backdrop {
   position: fixed;
